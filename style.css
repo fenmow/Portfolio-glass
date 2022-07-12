@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to left bottom, #62D1EA 60%, #245350);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+main {
+    width: 98%;
+    max-width: 1200px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));;
+    border-radius: 40px;
+    padding-bottom: 17px;
+}
+
+.person {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    
+}
+
+.person img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.person p, .skills h1, .card p {
+    color: #5496CD;
+}
+
+.person .pro {
+    margin-bottom: 20px;
+}
+
+.socials {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials div i {
+    font-size: 50px;
+    margin-right: 15px;
+}
+
+.skills {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills h1 {
+    font-size: 45px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 450px;
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 19px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7));
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 120px;
+    height: 135px;
+}
+
+.skill {
+    margin: 15px 0;
+}
+
+.bar {
+    width: 100%;
+    height: 20px;
+    background: rgb(230, 227, 227);
+    border-radius: 20px;
+    position: relative;
+}
+
+.bar::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60%;
+    background: #46A3A2;
+    border-radius: 20px 0 0 20px;
+}
+
+@media screen and (max-width: 950px) {
+    .socials div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .socials {
+        flex-direction: column;
+    }
+
+    .socials div {
+        margin: 10px 0;
+    }
+
+    .socials div i {
+        margin-right: 0;
+    }
+}
